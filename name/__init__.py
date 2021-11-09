@@ -14,6 +14,7 @@ class Person(object):
         return 'Object from <Person Class> (name: {}, session.headers: {})'.format(self.name, self.session.headers)
 
     def get_gender(self):
+        # https://genderize.io/
         params = {'name': self.name}
         response = self.session.get('https://api.genderize.io', params=params)
         
@@ -29,6 +30,7 @@ class Person(object):
             return {'error': {'status_code': response.status_code, 'headers': response.headers}}
 
     def get_nationality(self):
+        # https://nationalize.io/
         params = {'name': self.name}
         response = self.session.get('https://api.nationalize.io', params=params)
         
@@ -44,6 +46,7 @@ class Person(object):
             return {'error': {'status_code': response.status_code, 'headers': response.headers}}
 
     def get_age(self):
+        # https://agify.io/
         params = {'name': self.name}
         response = self.session.get('https://api.agify.io', params=params)
         
