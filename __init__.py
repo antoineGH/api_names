@@ -11,7 +11,6 @@ def create_app(config_class=Config):
 
     from name.routes import name
     app.register_blueprint(name)
-
     return app      
 
     
